@@ -50,4 +50,9 @@ public class ShapeTest {
         assertEquals(100, new Square(10).square());
         assertEquals(100, new Square(-10).square());
     }
+    @Test()
+    void countTest() {
+    // TODO
+    }
+
 }

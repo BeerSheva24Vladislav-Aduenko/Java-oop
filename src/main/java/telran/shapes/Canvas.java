@@ -31,4 +31,8 @@ public class Canvas implements Shape{
         return totalSquare;
     }
 
+    public int count() {
+        return -1;
+    }
+
 }
