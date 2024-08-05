@@ -52,7 +52,24 @@ public class ShapeTest {
     }
     @Test()
     void countTest() {
-    // TODO
+        Canvas canvasSquar = new Canvas();
+        canvasSquar.addShape(new Square(7));
+        canvasSquar.addShape(new Square(5));
+
+        Canvas newCanvas= new Canvas();
+        newCanvas.addShape(new Rectangle(7, 5));
+        newCanvas.addShape(new Square(10));;
+        newCanvas.addShape(canvasSquar);
+        assertEquals(5, newCanvas.count());
+
+
+        Canvas newCanvas2= new Canvas();
+        newCanvas2.addShape(canvasSquar);
+        newCanvas2.addShape(newCanvas);
+        newCanvas2.addShape(new Square(5));
+        newCanvas2.addShape(new Rectangle(7, 5));
+        assertEquals(11, newCanvas2.count());
+
     }
 
 }
